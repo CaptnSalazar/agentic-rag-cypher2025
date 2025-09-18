@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic RAG — Cypher 2025</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #adb5bd;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #343a40;
+      border-bottom: 2px solid #dee2e6;
+      padding-bottom: 0.3rem;
+    }
+    pre {
+      background-color: #e9ecef;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f3f5;
+      color: #495057;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Agentic RAG</h1>
+    <p>Cypher 2025 Hackathon — Dynamic Knowledge Assistant</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        Agentic RAG is a modular multi-agent knowledge assistant designed to dynamically adapt to different query types. 
+        It integrates <strong>local knowledge sources</strong>, <strong>live web search</strong>, and <strong>reasoning agents</strong> 
+        to provide reliable, verifiable, and context-aware answers.
+      </p>
+    </section>
+
+    <section>
+      <h2>Quickstart</h2>
+      <pre>
+git clone https://github.com/CaptnSalazar/agentic-rag-cypher2025.git
+cd agentic-rag-cypher2025
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python run_demo.py --query "What causes sudden server crashes?"
+      </pre>
+    </section>
+
+    <section>
+      <h2>Repository</h2>
+      <p>
+        Explore the full code on GitHub: <a href="https://github.com/CaptnSalazar/agentic-rag-cypher2025" target="_blank">Agentic RAG Repository</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Multi-agent pipeline (Router, Retriever, Reasoner, Verifier)</li>
+        <li>Dynamic query handling (Factual, Open-ended, Reasoning-heavy)</li>
+        <li>Evidence-grounded responses with provenance and citations</li>
+        <li>Minimalist and clear architecture for real-world applicability</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Developer</h2>
+      <p>Yash Shukla</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Agentic RAG — Cypher Hackathon | Developed by Yash Shukla
+  </footer>
+</body>
+</html>
