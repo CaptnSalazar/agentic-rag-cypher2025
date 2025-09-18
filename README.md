@@ -12,7 +12,33 @@ Many question-answering systems struggle with adaptability across query types an
 - API keys: OpenAI API key
 
 ## Quickstart
-[Keep your existing quickstart steps unchanged.]
+
+1. **Clone & enter repo**
+
+   ```bash
+   git clone https://github.com/username/agentic-rag-cypher2025.git
+   cd agentic-rag-cypher2025
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. **Configure API keys**
+
+   ```bash
+   export OPENAI_API_KEY="your-api-key"
+   ```
+
+4. **Run demo**
+
+   ```bash
+   python run_demo.py --query "What causes sudden server crashes?"
+   ```
 
 ## Architecture
 The system uses a multi-agent pipeline:
@@ -55,7 +81,34 @@ The system uses a multi-agent pipeline:
 ```         
 
 ## Repository Structure
-[Keep your existing structure unchanged.]
+```
+agentic-rag-cypher2025/
+│   README.md
+│   requirements.txt
+│   config.py
+│   run_demo.py
+│   orchestrator.py
+│
+├── agents/
+│   ├── router.py
+│   ├── web_search.py
+│   ├── ranker_qa.py
+│   ├── reasoner.py
+│   └── verifier.py
+│
+├── retriever/
+│   └── vector_store.py
+│
+├── llm_clients/
+│   └── openai_client.py
+│
+├── utils/
+│   └── provenance.py
+│
+└── scripts/
+    ├── ingest_data.py
+    └── demo_queries.sh
+```
 
 ## Usage Examples
 - **Factual Query**:
@@ -69,13 +122,13 @@ The system uses a multi-agent pipeline:
   ```bash
   python run_demo.py --query "What are the implications of AI in healthcare?"
   ```
-  **Output**: [Summarized perspectives with sources.]
+  **Output**: Summarized perspectives with sources.
 
 - **Reasoning-Heavy Query**:
   ```bash
   python run_demo.py --query "Why might a server crash unexpectedly?"
   ```
-  **Output**: [Detailed reasoning with steps and citations.]
+  **Output**: Detailed reasoning with steps and citations.
 
 ## Testing and Validation
 The system was tested with 50 sample queries across factual, open-ended, and reasoning-heavy categories. Accuracy was evaluated based on source grounding and response coherence. Unit tests for individual agents are in `tests/` (if applicable).
@@ -84,7 +137,10 @@ The system was tested with 50 sample queries across factual, open-ended, and rea
 Contributions are welcome! Please submit issues or pull requests via GitHub. Ensure code follows PEP 8 standards and includes tests.
 
 ## Future Improvements
-[Keep your existing improvements unchanged.]
+- Add caching for faster responses
+- Integrate structured sources (databases, APIs)
+- Expand reasoning agent with symbolic + probabilistic reasoning
+- Build a simple web UI for improved UX
 
 ## License
 MIT License
